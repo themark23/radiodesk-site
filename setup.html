@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RadioDesk Setup Guide — Install &amp; Get Started on Mac</title>
+<meta name="description" content="How to install RadioDesk on Mac. Step-by-step setup guide covering system requirements, installation, microphone permissions, and your first show.">
+<link rel="canonical" href="https://radiodesk.app/setup.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://radiodesk.app/setup.html">
+<meta property="og:title" content="RadioDesk Setup Guide — Install &amp; Get Started on Mac">
+<meta property="og:description" content="Step-by-step setup guide for RadioDesk. System requirements, installation, microphone permissions, and building your first show.">
+<meta property="og:image" content="https://radiodesk.app/og-image.png">
+
+<!-- Schema: HowTo -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Install and Set Up RadioDesk on Mac",
+  "description": "Step-by-step guide to installing RadioDesk broadcast software on Mac, granting microphone permissions, and building your first show.",
+  "totalTime": "PT5M",
+  "supply": [
+    { "@type": "HowToSupply", "name": "Mac running macOS 12 Monterey or later" },
+    { "@type": "HowToSupply", "name": "RadioDesk .dmg file" }
+  ],
+  "step": [
+    { "@type": "HowToStep", "name": "Download RadioDesk", "text": "Download the correct .dmg file for your Mac. Intel Mac: download RadioDesk_Intel.dmg. Apple Silicon (M1/M2/M3/M4): download RadioDesk_AppleSilicon.dmg." },
+    { "@type": "HowToStep", "name": "Open the DMG", "text": "Double-click the downloaded .dmg file. A window will appear showing RadioDesk and your Applications folder." },
+    { "@type": "HowToStep", "name": "Drag to Applications", "text": "Drag RadioDesk into the Applications folder. No installer required." },
+    { "@type": "HowToStep", "name": "First Launch", "text": "Open RadioDesk from Applications or Launchpad. If macOS shows a security dialog, right-click the app and choose Open, then click Open in the dialog." },
+    { "@type": "HowToStep", "name": "Grant Microphone Permission", "text": "Click Record VT in the toolbar. macOS will ask for microphone access. Click OK. This only needs to be done once." }
+  ]
+}
+</script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "RadioDesk", "item": "https://radiodesk.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Setup Guide", "item": "https://radiodesk.app/setup.html" }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root { --black: #08080C; --dark: #0F0F16; --card: #13131C; --border: #1E1E2E; --green: #00FF88; --green-dim: rgba(0,255,136,0.12); --green-glow: rgba(0,255,136,0.06); --white: #F0F0F0; --gray: #666680; --light-gray: #999AB0; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--white); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.6; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; background: rgba(8,8,12,0.95); border-bottom: 1px solid var(--border); backdrop-filter: blur(12px); }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: 3px; color: var(--white); text-decoration: none; }
+  .nav-logo span { color: var(--green); }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--gray); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--white); }
+  .nav-cta { background: var(--green); color: var(--black); font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 1px; padding: 10px 22px; border: none; cursor: pointer; text-decoration: none; }
+
+  /* PAGE */
+  .page-wrap { max-width: 760px; margin: 0 auto; padding: 120px 40px 80px; }
+  .breadcrumb { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--gray); margin-bottom: 32px; }
+  .breadcrumb a { color: var(--green); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .page-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 5px; color: var(--green); text-transform: uppercase; margin-bottom: 16px; }
+  h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(48px, 8vw, 80px); letter-spacing: 2px; line-height: 1; color: var(--white); margin-bottom: 24px; }
+  
+  /* AEO Answer Block */
+  .answer-block { background: var(--green-glow); border-left: 3px solid var(--green); padding: 16px 20px; margin-bottom: 52px; }
+  .answer-block p { font-size: 15px; color: var(--light-gray); line-height: 1.6; }
+  .answer-block strong { color: var(--white); font-weight: 500; }
+
+  /* CONTENT */
+  .section { margin-bottom: 56px; }
+  h2 { font-family: 'Bebas Neue', sans-serif; font-size: 32px; letter-spacing: 2px; color: var(--white); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  h3 { font-size: 16px; font-weight: 500; color: var(--white); margin: 24px 0 10px; }
+  p { font-size: 15px; color: var(--light-gray); line-height: 1.75; margin-bottom: 16px; }
+  strong { color: var(--white); font-weight: 500; }
+  ul, ol { padding-left: 0; list-style: none; margin-bottom: 16px; }
+  li { font-size: 15px; color: var(--light-gray); line-height: 1.7; padding: 6px 0 6px 20px; position: relative; }
+  li::before { content: '→'; position: absolute; left: 0; color: var(--green); font-family: 'DM Mono', monospace; font-size: 12px; top: 8px; }
+  ol { counter-reset: steps; }
+  ol li { counter-increment: steps; }
+  ol li::before { content: counter(steps); background: var(--green); color: var(--black); width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; top: 7px; }
+
+  /* Step card */
+  .step-card { background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--green); padding: 20px 24px; margin-bottom: 12px; }
+  .step-num { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--green); letter-spacing: 2px; margin-bottom: 6px; }
+  .step-title { font-size: 15px; font-weight: 500; color: var(--white); margin-bottom: 8px; }
+  .step-desc { font-size: 14px; color: var(--light-gray); line-height: 1.65; }
+
+  /* Code block */
+  .code-block { background: #0A0A12; border: 1px solid var(--border); padding: 14px 18px; font-family: 'DM Mono', monospace; font-size: 13px; color: var(--green); letter-spacing: 0.5px; margin: 12px 0 16px; overflow-x: auto; }
+
+  /* Callout */
+  .callout { background: var(--green-glow); border: 1px solid var(--green-dim); padding: 14px 18px; margin: 16px 0; font-size: 14px; color: var(--light-gray); line-height: 1.6; }
+  .callout strong { color: var(--green); }
+
+  /* Req grid */
+  .req-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+  .req-item { background: var(--card); border: 1px solid var(--border); padding: 14px 16px; }
+  .req-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 2px; color: var(--green); text-transform: uppercase; margin-bottom: 4px; }
+  .req-val { font-size: 14px; color: var(--white); }
+
+  /* FOOTER */
+  footer { border-top: 1px solid var(--border); padding: 32px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 3px; color: var(--white); text-decoration: none; }
+  .footer-logo span { color: var(--green); }
+  .footer-copy { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--gray); }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--gray); text-decoration: none; letter-spacing: 1px; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--green); }
+
+  @media (max-width: 600px) { nav { padding: 16px 20px; } .nav-links { display: none; } .page-wrap { padding: 100px 20px 60px; } .req-grid { grid-template-columns: 1fr; } footer { padding: 24px 20px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">RADIO<span>DESK</span></a>
+  <div class="nav-links">
+    <a href="/#features">Features</a>
+    <a href="/setup.html" class="active">Setup Guide</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="mailto:support@radiodesk.app">Support</a>
+  </div>
+  <a href="https://YOUR-GUMROAD-LINK.gumroad.com/l/radiodesk" class="nav-cta" target="_blank">BUY — $39</a>
+</nav>
+
+<main class="page-wrap">
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="/">RadioDesk</a> → Setup Guide
+  </nav>
+
+  <div class="page-eyebrow">Documentation</div>
+  <h1>Setup Guide</h1>
+
+  <!-- AEO Answer Block -->
+  <div class="answer-block">
+    <p><strong>RadioDesk installs in under a minute.</strong> Download the correct .dmg for your Mac (Intel or Apple Silicon), drag it to your Applications folder, and launch it. macOS will ask for microphone permission the first time you record a voice track.</p>
+  </div>
+
+  <!-- SYSTEM REQUIREMENTS -->
+  <section class="section" id="requirements">
+    <h2>System Requirements</h2>
+    <p>Before installing RadioDesk, confirm your Mac meets these requirements:</p>
+    <div class="req-grid">
+      <div class="req-item"><div class="req-label">macOS</div><div class="req-val">12 Monterey or later<br><small style="color:var(--gray);font-size:12px">Ventura or later recommended</small></div></div>
+      <div class="req-item"><div class="req-label">Processor</div><div class="req-val">Intel or Apple Silicon</div></div>
+      <div class="req-item"><div class="req-label">RAM</div><div class="req-val">2GB minimum<br><small style="color:var(--gray);font-size:12px">4GB recommended</small></div></div>
+      <div class="req-item"><div class="req-label">Disk Space</div><div class="req-val">500MB available</div></div>
+    </div>
+    <p>A microphone or audio interface is needed for recording voice tracks.</p>
+  </section>
+
+  <!-- INSTALLATION -->
+  <section class="section" id="installation">
+    <h2>Installation</h2>
+
+    <h3>Which version should I download?</h3>
+    <p>Click the <strong>Apple menu → About This Mac</strong>. If you see <strong>Apple M1, M2, M3, or M4</strong> under Chip, download the Apple Silicon version. If you see <strong>Intel</strong> under Processor, download the Intel version.</p>
+
+    <div class="step-card">
+      <div class="step-num">STEP 01</div>
+      <div class="step-title">Download RadioDesk</div>
+      <div class="step-desc">Download the correct .dmg for your Mac from your Gumroad purchase receipt. Intel Mac (2019 or earlier): RadioDesk_Intel.dmg · Apple Silicon (M1/M2/M3/M4): RadioDesk_AppleSilicon.dmg</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">STEP 02</div>
+      <div class="step-title">Open the DMG</div>
+      <div class="step-desc">Double-click the downloaded .dmg file. A window appears showing RadioDesk and your Applications folder.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">STEP 03</div>
+      <div class="step-title">Drag to Applications</div>
+      <div class="step-desc">Drag RadioDesk into the Applications folder. That's it — no installer required.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">STEP 04</div>
+      <div class="step-title">First Launch</div>
+      <div class="step-desc">Open RadioDesk from your Applications folder or Launchpad. If macOS shows a security dialog saying "RadioDesk cannot be opened because the developer cannot be verified," right-click the app and choose Open, then click Open in the dialog. You only need to do this once.</div>
+    </div>
+
+    <div class="callout"><strong>Tip:</strong> RadioDesk is a self-contained app. You do not need to install Python or any other software — everything is bundled inside.</div>
+  </section>
+
+  <!-- MICROPHONE -->
+  <section class="section" id="microphone">
+    <h2>Microphone Permission</h2>
+    <p>RadioDesk needs microphone access to record voice tracks. macOS asks for permission the first time you use the recording feature.</p>
+    <ol>
+      <li>Click <strong>Record VT</strong> or <strong>Dub Song</strong> in the toolbar</li>
+      <li>macOS shows a dialog: "RadioDesk would like to access the microphone." Click <strong>OK</strong></li>
+      <li>Done. This permission only needs to be granted once</li>
+    </ol>
+    <p>If you accidentally clicked <strong>Don't Allow</strong>: go to <strong>System Settings → Privacy &amp; Security → Microphone</strong>, find RadioDesk in the list, and toggle it on. Then relaunch RadioDesk.</p>
+  </section>
+
+  <!-- QUICK START -->
+  <section class="section" id="quickstart">
+    <h2>Quick Start — Your First Show</h2>
+
+    <h3>Building Your Playlist</h3>
+    <ol>
+      <li>Click <strong>+ Add Song</strong> and browse to your audio files (MP3, WAV, or FLAC)</li>
+      <li>Repeat to add more songs. Drag the <strong>::</strong> handle on any row to reorder</li>
+      <li>Click <strong>Record VT</strong> to record a voice track. Press RECORD, speak, press STOP, then Save &amp; Add to Playlist</li>
+    </ol>
+    <div class="callout"><strong>Tip:</strong> RadioDesk reads your MP3 and FLAC tags automatically — artist, title, and album appear without any manual entry.</div>
+
+    <h3>Playing Your Show</h3>
+    <ol>
+      <li>Click <strong>Play</strong> on any row to start playback</li>
+      <li>The Now Playing bar shows track name, artist, remaining time, and a live countdown</li>
+      <li>Press the <strong>spacebar</strong> to stop playback at any time</li>
+    </ol>
+    <div class="callout"><strong>Tip:</strong> The wall clock in the top right corner always shows the current time so you can stay on schedule.</div>
+
+    <h3>Saving Your Show</h3>
+    <ol>
+      <li>Click <strong>Save</strong> in the menu bar to save your show as a .radiodesk file</li>
+      <li>RadioDesk autosaves every 5 minutes automatically</li>
+      <li>Use <strong>Open</strong> to load a previously saved show</li>
+    </ol>
+  </section>
+
+  <!-- KEY FEATURES -->
+  <section class="section" id="features">
+    <h2>Key Features</h2>
+
+    <h3>Segue Editor</h3>
+    <p>Click the <strong>~ Segue</strong> button between any two songs. Set how long the two tracks overlap and how far the outgoing track ducks. The standard starting point for duck depth is <strong>-14dB</strong>. The Preview button lets you hear exactly how the transition will sound before your show.</p>
+
+    <h3>Voice Track Recording &amp; Processing</h3>
+    <p>Click <strong>Record VT</strong> to open the recording panel. Select your input device, press RECORD, and speak. After stopping, click anywhere on the waveform to scrub to a specific point. Go to <strong>VT Processing</strong> in the menu bar for Noise Gate, Compressor, High-Pass Filter, and Limiter controls. A light high-pass filter and gentle compressor is a good starting point for most environments.</p>
+
+    <h3>Using an Audio Interface</h3>
+    <p>Connect your audio interface <strong>before</strong> opening RadioDesk. In Record VT, select your interface from the Input Device dropdown. RadioDesk automatically prioritizes professional interfaces like Vocaster and BlackHole and remembers your last selection.</p>
+
+    <h3>Cue Sheet Export</h3>
+    <p>Click <strong>Cue Sheet</strong> in the menu bar to export a CSV log with offset timestamps, media type, title, artist, album, and year for every element in your show. Enter your show name and host name once — RadioDesk remembers them.</p>
+
+    <h3>Exporting Your Show</h3>
+    <p>Click <strong>Export Show</strong> to render your entire playlist — crossfades and all — to a single WAV or MP3 file. WAV for lossless quality, MP3 for a smaller file. MP3 export requires ffmpeg:</p>
+    <div class="code-block">brew install ffmpeg</div>
+  </section>
+
+  <!-- NEXT STEPS -->
+  <section class="section">
+    <h2>Need More Help?</h2>
+    <p>Check the <a href="/faq.html" style="color:var(--green);text-decoration:none;">FAQ</a> for answers to the most common questions, or email <a href="mailto:support@radiodesk.app" style="color:var(--green);text-decoration:none;">support@radiodesk.app</a> with your macOS version, Mac model, and a description of the issue.</p>
+  </section>
+</main>
+
+<footer>
+  <a href="/" class="footer-logo">RADIO<span>DESK</span></a>
+  <div class="footer-copy">© 2026 Schectman Media Group LLC</div>
+  <div class="footer-links">
+    <a href="/setup.html">Setup Guide</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="mailto:support@radiodesk.app">Support</a>
+    <a href="/#buy">Buy — $39</a>
+  </div>
+</footer>
+</body>
+</html>

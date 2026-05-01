@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RadioDesk FAQ — Frequently Asked Questions</title>
+<meta name="description" content="Answers to the most common RadioDesk questions — installation, microphone access, audio interfaces, playback issues, file formats, and troubleshooting.">
+<link rel="canonical" href="https://radiodesk.app/faq.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://radiodesk.app/faq.html">
+<meta property="og:title" content="RadioDesk FAQ — Frequently Asked Questions">
+<meta property="og:description" content="Answers to the most common RadioDesk questions — installation, microphone access, audio formats, playback issues, and troubleshooting.">
+<meta property="og:image" content="https://radiodesk.app/og-image.png">
+
+<!-- Schema: FAQPage — drives 3.1x higher AI answer extraction rates -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does macOS say RadioDesk cannot be opened because the developer cannot be verified?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This is a standard macOS security message for apps downloaded outside the App Store. Right-click (or Control-click) RadioDesk in your Applications folder and choose Open. Click Open in the dialog. You only need to do this once."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does macOS say RadioDesk is damaged and can't be opened?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This usually means a download issue. Delete the copy in your Applications folder, re-download RadioDesk, and try again. If the issue persists, open Terminal and run: xattr -cr /Applications/RadioDesk.app"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to install Python to run RadioDesk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. RadioDesk is a self-contained application. Everything it needs is bundled inside the app. Just drag it to Applications and open it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which version of RadioDesk should I download — Intel or Apple Silicon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Click the Apple menu and choose About This Mac. If you see Apple M1, M2, M3, or M4 under Chip, download the Apple Silicon version. If you see Intel under Processor, download the Intel version."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I install RadioDesk on more than one Mac?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Your purchase covers personal use on your own Macs. Please do not share your download link with others."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "RadioDesk doesn't have microphone access. How do I fix it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Go to System Settings > Privacy & Security > Microphone. Make sure RadioDesk is in the list and toggled on. If it's not in the list, open RadioDesk, click Record VT, and macOS will prompt you. If it still doesn't appear, open Terminal and run: tccutil reset Microphone com.radiodesk.app — then relaunch RadioDesk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My audio interface isn't showing up in RadioDesk. What should I do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Make sure your interface is connected and powered on before opening RadioDesk. If you connected it after launching, close the Record VT panel, reconnect the interface, and reopen the panel. The dropdown refreshes when the panel opens."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What audio formats does RadioDesk support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RadioDesk supports MP3, WAV, and FLAC. AAC and other formats are not currently supported."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Cue Sheet export in RadioDesk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Cue Sheet exports a CSV file with a timestamped log of every element in your show — songs, voice tracks, and their metadata. It follows broadcast standard format with columns for offset, media type, title, artist, album, and year. Most broadcast logging systems can import this format directly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I export my RadioDesk show to a single audio file?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Click Export Show in the menu bar. Choose WAV for lossless quality or MP3 for a smaller file. The export includes all tracks with crossfades applied. You'll need ffmpeg installed for MP3 export — run brew install ffmpeg in Terminal if you don't have it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are my RadioDesk show files saved?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RadioDesk saves shows as .radiodesk files wherever you choose when you click Save. Autosave files are stored in your home folder as .radiodesk_autosave.radiodesk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "The segue or ducking doesn't sound right. How do I fix it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the Segue Editor by clicking the ~ Segue button between any two songs. Use the Duck Depth slider to control how far the outgoing track fades — -14dB is the standard starting point. The overlap time controls how long the two tracks play simultaneously. Click Preview Segue to hear the result before your show."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I move RadioDesk to a new Mac?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Download RadioDesk again on your new Mac using the same download link from your purchase. Your saved show files (.radiodesk files) can be copied over normally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "RadioDesk playback stutters or glitches. What causes this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This can happen with large audio files on slower machines. Try closing other apps to free up memory. WAV files generally play more smoothly than MP3s because they don't require real-time decoding."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "RadioDesk", "item": "https://radiodesk.app/" },
+    { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://radiodesk.app/faq.html" }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root { --black: #08080C; --dark: #0F0F16; --card: #13131C; --border: #1E1E2E; --green: #00FF88; --green-dim: rgba(0,255,136,0.12); --green-glow: rgba(0,255,136,0.06); --white: #F0F0F0; --gray: #666680; --light-gray: #999AB0; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--white); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.6; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; background: rgba(8,8,12,0.95); border-bottom: 1px solid var(--border); backdrop-filter: blur(12px); }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: 3px; color: var(--white); text-decoration: none; }
+  .nav-logo span { color: var(--green); }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--gray); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--white); }
+  .nav-cta { background: var(--green); color: var(--black); font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 1px; padding: 10px 22px; border: none; cursor: pointer; text-decoration: none; }
+
+  .page-wrap { max-width: 760px; margin: 0 auto; padding: 120px 40px 80px; }
+  .breadcrumb { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--gray); margin-bottom: 32px; }
+  .breadcrumb a { color: var(--green); text-decoration: none; }
+  .page-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 5px; color: var(--green); text-transform: uppercase; margin-bottom: 16px; }
+  h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(48px, 8vw, 80px); letter-spacing: 2px; line-height: 1; color: var(--white); margin-bottom: 24px; }
+
+  .answer-block { background: var(--green-glow); border-left: 3px solid var(--green); padding: 16px 20px; margin-bottom: 52px; }
+  .answer-block p { font-size: 15px; color: var(--light-gray); line-height: 1.6; }
+  .answer-block strong { color: var(--white); font-weight: 500; }
+
+  /* CATEGORY NAV */
+  .cat-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 48px; }
+  .cat-btn { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--gray); background: var(--card); border: 1px solid var(--border); padding: 7px 14px; cursor: pointer; text-decoration: none; transition: all 0.2s; }
+  .cat-btn:hover, .cat-btn.active { color: var(--green); border-color: var(--green); background: var(--green-glow); }
+
+  /* FAQ SECTION */
+  .faq-section { margin-bottom: 56px; }
+  .faq-section-title { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 2px; color: var(--white); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+
+  /* FAQ ITEM */
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-q { width: 100%; background: none; border: none; text-align: left; padding: 18px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+  .faq-q-text { font-size: 15px; font-weight: 500; color: var(--white); line-height: 1.4; }
+  .faq-icon { color: var(--green); font-family: 'DM Mono', monospace; font-size: 18px; flex-shrink: 0; margin-top: 1px; transition: transform 0.25s; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+  .faq-a { display: none; padding: 0 0 18px; font-size: 14px; color: var(--light-gray); line-height: 1.75; }
+  .faq-item.open .faq-a { display: block; }
+  .faq-a strong { color: var(--white); font-weight: 500; }
+  .faq-a a { color: var(--green); text-decoration: none; }
+  .faq-a a:hover { text-decoration: underline; }
+
+  .code-block { background: #0A0A12; border: 1px solid var(--border); padding: 12px 16px; font-family: 'DM Mono', monospace; font-size: 13px; color: var(--green); margin: 10px 0 6px; overflow-x: auto; display: block; }
+
+  /* STILL NEED HELP */
+  .help-box { background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--green); padding: 28px 32px; margin-top: 48px; text-align: center; }
+  .help-title { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 2px; color: var(--white); margin-bottom: 8px; }
+  .help-desc { font-size: 14px; color: var(--light-gray); margin-bottom: 20px; line-height: 1.6; }
+  .help-btn { background: var(--green); color: var(--black); font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 1px; padding: 12px 28px; border: none; cursor: pointer; text-decoration: none; display: inline-block; }
+
+  footer { border-top: 1px solid var(--border); padding: 32px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 3px; color: var(--white); text-decoration: none; }
+  .footer-logo span { color: var(--green); }
+  .footer-copy { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--gray); }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--gray); text-decoration: none; letter-spacing: 1px; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--green); }
+
+  @media (max-width: 600px) { nav { padding: 16px 20px; } .nav-links { display: none; } .page-wrap { padding: 100px 20px 60px; } footer { padding: 24px 20px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">RADIO<span>DESK</span></a>
+  <div class="nav-links">
+    <a href="/#features">Features</a>
+    <a href="/setup.html">Setup Guide</a>
+    <a href="/faq.html" class="active">FAQ</a>
+    <a href="mailto:support@radiodesk.app">Support</a>
+  </div>
+  <a href="https://YOUR-GUMROAD-LINK.gumroad.com/l/radiodesk" class="nav-cta" target="_blank">BUY — $39</a>
+</nav>
+
+<main class="page-wrap">
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="/">RadioDesk</a> → FAQ
+  </nav>
+
+  <div class="page-eyebrow">Support</div>
+  <h1>Frequently Asked Questions</h1>
+
+  <div class="answer-block">
+    <p><strong>RadioDesk is a self-contained Mac app</strong> — no Python or dependencies required. Most questions are answered here. If you don't find what you need, email <strong>support@radiodesk.app</strong> with your macOS version and Mac model.</p>
+  </div>
+
+  <div class="cat-nav">
+    <a href="#installation" class="cat-btn">Installation &amp; Setup</a>
+    <a href="#microphone" class="cat-btn">Microphone &amp; Recording</a>
+    <a href="#playback" class="cat-btn">Playback &amp; Audio</a>
+    <a href="#files" class="cat-btn">Files &amp; Formats</a>
+    <a href="#troubleshooting" class="cat-btn">Troubleshooting</a>
+  </div>
+
+  <!-- INSTALLATION -->
+  <section class="faq-section" id="installation">
+    <h2 class="faq-section-title">Installation &amp; Setup</h2>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">Why does macOS say "RadioDesk cannot be opened because the developer cannot be verified"?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">This is a standard macOS security message for apps downloaded outside the App Store. Right-click (or Control-click) RadioDesk in your Applications folder and choose <strong>Open</strong>. Click <strong>Open</strong> in the dialog. You only need to do this once.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">Why does macOS say "RadioDesk is damaged and can't be opened"?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">This usually means a download issue. Delete the copy in your Applications folder, re-download RadioDesk, and try again. If the issue persists, open Terminal and run:<code class="code-block">xattr -cr /Applications/RadioDesk.app</code></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">Do I need to install Python or anything else to run RadioDesk?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">No. RadioDesk is a self-contained application. Everything it needs is bundled inside the app. Just drag it to Applications and open it.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">Which version should I download — Intel or Apple Silicon?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Click <strong>Apple menu → About This Mac</strong>. If you see <strong>Apple M1, M2, M3, or M4</strong> under Chip, download the Apple Silicon version. If you see <strong>Intel</strong> under Processor, download the Intel version.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">Can I install RadioDesk on more than one Mac?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Yes. Your purchase covers personal use on your own Macs. Please don't share your download link with others — it helps keep RadioDesk updated and supported.</div>
+    </div>
+  </section>
+
+  <!-- MICROPHONE -->
+  <section class="faq-section" id="microphone">
+    <h2 class="faq-section-title">Microphone &amp; Recording</h2>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">RadioDesk doesn't seem to have microphone access. How do I fix it?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Go to <strong>System Settings → Privacy &amp; Security → Microphone</strong>. Make sure RadioDesk is in the list and toggled on. If it's not in the list at all, open RadioDesk, click <strong>Record VT</strong>, and macOS should prompt you. If it still doesn't appear, open Terminal and run:<code class="code-block">tccutil reset Microphone com.radiodesk.app</code>Then relaunch RadioDesk and click Record VT. You'll be prompted to grant access again.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">My audio interface isn't showing up in the device dropdown.</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Make sure your interface is connected and powered on <strong>before</strong> opening RadioDesk. If you connected it after launching, close the Record VT panel, reconnect the interface, and reopen the panel — the dropdown refreshes when the panel opens.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">Recording sounds distorted or has static. What should I check?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Check your input gain on your audio interface — it may be set too high. In RadioDesk, watch the VU meter while recording. Aim to keep peaks in the green/amber zone and avoid the red zone. If you're using the built-in MacBook mic, try moving closer to reduce ambient noise.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">Can I monitor my voice while recording?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Direct monitoring (hearing yourself in your headphones in real time) is handled by your audio interface, not by RadioDesk. Check your interface's manual for how to enable direct monitoring.</div>
+    </div>
+  </section>
+
+  <!-- PLAYBACK -->
+  <section class="faq-section" id="playback">
+    <h2 class="faq-section-title">Playback &amp; Audio</h2>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">There's no sound when I press Play. What's wrong?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Check that your Mac's output volume isn't muted. Also verify the audio file is a supported format (MP3, WAV, or FLAC). If the file plays in another app but not RadioDesk, the file may be corrupted.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">The segue or ducking doesn't sound right. How do I adjust it?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Open the Segue Editor by clicking <strong>~ Segue</strong> between any two songs. Use the <strong>Duck Depth</strong> slider to control how far the outgoing track fades — <strong>-14dB</strong> is the standard starting point. The overlap time controls how long the two tracks play simultaneously. Click <strong>Preview Segue</strong> to hear the result before your show.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">Playback stutters or glitches. How do I fix it?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">This can happen with large audio files on slower machines. Try closing other apps to free up memory. WAV files generally play more smoothly than MP3s because they don't require real-time decoding.</div>
+    </div>
+  </section>
+
+  <!-- FILES -->
+  <section class="faq-section" id="files">
+    <h2 class="faq-section-title">Files &amp; Formats</h2>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">What audio formats does RadioDesk support?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">RadioDesk supports <strong>MP3, WAV, and FLAC</strong>. These cover the vast majority of broadcast audio. AAC and other formats are not currently supported.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">Where are my show files saved?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">RadioDesk saves shows as <strong>.radiodesk</strong> files wherever you choose when you click Save. Autosave files are stored in your home folder as <strong>.radiodesk_autosave.radiodesk</strong>.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">Can I export my show to a single audio file?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Yes. Click <strong>Export Show</strong> in the menu bar. Choose WAV for lossless quality or MP3 for a smaller file. The export includes all tracks with crossfades applied. You'll need ffmpeg installed for MP3 export:<code class="code-block">brew install ffmpeg</code></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">What is the Cue Sheet export?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">The Cue Sheet exports a CSV file with a timestamped log of every element in your show — songs, voice tracks, and their metadata. It follows broadcast standard format with columns for offset, media type, title, artist, album, and year. Most broadcast logging systems can import this format directly.</div>
+    </div>
+  </section>
+
+  <!-- TROUBLESHOOTING -->
+  <section class="faq-section" id="troubleshooting">
+    <h2 class="faq-section-title">Troubleshooting</h2>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">RadioDesk quits unexpectedly. What should I do?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Please email <a href="mailto:support@radiodesk.app">support@radiodesk.app</a> with a description of what you were doing when it happened, your macOS version (Apple menu → About This Mac), and whether you're on Intel or Apple Silicon.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">A feature isn't working as expected. What should I try first?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Quit and relaunch RadioDesk — this resolves most one-off issues. If the problem persists, contact <a href="mailto:support@radiodesk.app">support@radiodesk.app</a> with a description of the steps to reproduce it.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">How do I move RadioDesk to a new Mac?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Download RadioDesk again on your new Mac using the same download link from your purchase. Your saved show files (.radiodesk files) can be copied over normally.</div>
+    </div>
+  </section>
+
+  <!-- STILL NEED HELP -->
+  <div class="help-box">
+    <div class="help-title">Still Need Help?</div>
+    <p class="help-desc">If your question isn't answered here, email support with your macOS version, Mac model, and a description of the issue. We'll get back to you as quickly as we can.</p>
+    <a href="mailto:support@radiodesk.app" class="help-btn">Email Support</a>
+  </div>
+</main>
+
+<footer>
+  <a href="/" class="footer-logo">RADIO<span>DESK</span></a>
+  <div class="footer-copy">© 2026 Schectman Media Group LLC</div>
+  <div class="footer-links">
+    <a href="/setup.html">Setup Guide</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="mailto:support@radiodesk.app">Support</a>
+    <a href="/#buy">Buy — $39</a>
+  </div>
+</footer>
+
+<script>
+  function toggle(btn) {
+    const item = btn.closest('.faq-item');
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RadioDesk — Professional Broadcast Software for Mac</title>
+<meta name="description" content="RadioDesk is professional broadcast software for Mac. DAW-style crossfade editor, waveform display, multi-track audio, cue sheet export. One-time purchase, $39.">
+<meta name="keywords" content="broadcast software mac, radio host software, dj software mac, crossfade editor mac, broadcast production software, radio show software">
+<link rel="canonical" href="https://radiodesk.app/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://radiodesk.app/">
+<meta property="og:title" content="RadioDesk — Professional Broadcast Software for Mac">
+<meta property="og:description" content="Studio-grade broadcast tools for working radio hosts and DJs. DAW-style crossfade editor, waveform display, cue sheet export. $39 one-time purchase.">
+<meta property="og:image" content="https://radiodesk.app/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RadioDesk — Professional Broadcast Software for Mac">
+<meta name="twitter:description" content="Studio-grade broadcast tools for working radio hosts and DJs. $39, one-time purchase.">
+
+<!-- Schema: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "RadioDesk",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "macOS 12 Monterey or later",
+  "offers": {
+    "@type": "Offer",
+    "price": "39.00",
+    "priceCurrency": "USD"
+  },
+  "description": "RadioDesk is professional broadcast production software for Mac. Features include a DAW-style crossfade and segue editor, waveform display with playhead, multi-track audio management, cue sheet export, and local artist tagging. One-time purchase, no subscription.",
+  "softwareVersion": "1.0",
+  "fileSize": "500MB",
+  "downloadUrl": "https://YOUR-GUMROAD-LINK.gumroad.com/l/radiodesk",
+  "screenshot": "https://radiodesk.app/screenshot.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Schectman Media Group LLC",
+    "url": "https://radiodesk.app"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "ratingCount": "1"
+  }
+}
+</script>
+
+<!-- Schema: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Schectman Media Group LLC",
+  "url": "https://radiodesk.app",
+  "logo": "https://radiodesk.app/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "support@radiodesk.app",
+    "contactType": "customer support"
+  },
+  "sameAs": []
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #08080C;
+    --dark: #0F0F16;
+    --card: #13131C;
+    --border: #1E1E2E;
+    --green: #00FF88;
+    --green-dim: rgba(0,255,136,0.12);
+    --green-glow: rgba(0,255,136,0.06);
+    --white: #F0F0F0;
+    --gray: #666680;
+    --light-gray: #999AB0;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--white); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.6; overflow-x: hidden; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E"); opacity: 0.03; pointer-events: none; z-index: 100; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid transparent; transition: all 0.3s; }
+  nav.scrolled { background: rgba(8,8,12,0.95); border-bottom-color: var(--border); backdrop-filter: blur(12px); }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: 3px; color: var(--white); text-decoration: none; }
+  .nav-logo span { color: var(--green); }
+  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-links a { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--gray); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--white); }
+  .nav-cta { background: var(--green); color: var(--black); font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 1px; padding: 10px 22px; border: none; cursor: pointer; text-decoration: none; display: inline-block; transition: opacity 0.2s; }
+  .nav-cta:hover { opacity: 0.85; }
+
+  /* HERO */
+  .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 120px 40px 80px; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(0,255,136,0.07) 0%, transparent 70%); pointer-events: none; }
+  .hero-eyebrow { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 4px; color: var(--green); text-transform: uppercase; margin-bottom: 28px; opacity: 0; animation: fadeUp 0.8s ease forwards 0.2s; }
+  .logo-mark { font-family: 'Bebas Neue', sans-serif; font-size: clamp(100px, 18vw, 180px); line-height: 0.9; letter-spacing: -4px; color: var(--white); display: block; opacity: 0; animation: fadeUp 0.8s ease forwards 0.3s; }
+  .logo-line { height: 4px; background: var(--green); margin: 12px auto 0; width: 80%; max-width: 500px; opacity: 0; animation: fadeUp 0.8s ease forwards 0.4s; }
+  .logo-sub { font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 14px; color: var(--gray); margin-top: 10px; text-transform: uppercase; opacity: 0; animation: fadeUp 0.8s ease forwards 0.45s; }
+
+  /* AEO Answer Block — 40 word rule */
+  .answer-block { max-width: 600px; margin: 32px auto 0; background: var(--green-glow); border-left: 3px solid var(--green); padding: 16px 20px; text-align: left; opacity: 0; animation: fadeUp 0.8s ease forwards 0.5s; }
+  .answer-block p { font-size: 15px; color: var(--light-gray); line-height: 1.6; }
+  .answer-block strong { color: var(--white); font-weight: 500; }
+
+  .hero-price { margin-top: 48px; opacity: 0; animation: fadeUp 0.8s ease forwards 0.65s; }
+  .price-tag { font-family: 'Bebas Neue', sans-serif; font-size: 64px; color: var(--green); line-height: 1; letter-spacing: 2px; }
+  .price-sub { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--gray); letter-spacing: 2px; margin-top: 4px; }
+  .hero-actions { display: flex; gap: 16px; align-items: center; justify-content: center; margin-top: 36px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s ease forwards 0.8s; }
+  .btn-primary { background: var(--green); color: var(--black); font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 500; letter-spacing: 1px; padding: 16px 36px; border: none; cursor: pointer; text-decoration: none; display: inline-block; transition: opacity 0.2s; }
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-ghost { background: transparent; color: var(--light-gray); font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 1px; padding: 16px 24px; border: 1px solid var(--border); cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.2s; }
+  .btn-ghost:hover { border-color: var(--gray); color: var(--white); }
+  .hero-meta { margin-top: 20px; font-family: 'DM Mono', monospace; font-size: 10px; color: var(--gray); letter-spacing: 1px; opacity: 0; animation: fadeUp 0.8s ease forwards 1s; }
+
+  /* MARQUEE */
+  .marquee-wrap { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 14px 0; overflow: hidden; background: var(--dark); }
+  .marquee-track { display: flex; gap: 60px; white-space: nowrap; animation: marquee 20s linear infinite; }
+  .marquee-item { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 3px; color: var(--gray); text-transform: uppercase; flex-shrink: 0; }
+  .marquee-item span { color: var(--green); margin-right: 60px; }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* SECTIONS */
+  .features { padding: 100px 40px; max-width: 1100px; margin: 0 auto; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 5px; color: var(--green); text-transform: uppercase; margin-bottom: 16px; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 72px); letter-spacing: 2px; line-height: 1; color: var(--white); margin-bottom: 16px; }
+  .section-desc { font-size: 15px; color: var(--light-gray); max-width: 540px; margin-bottom: 52px; line-height: 1.7; }
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .feature-card { background: var(--card); padding: 36px 32px; transition: background 0.2s; position: relative; overflow: hidden; }
+  .feature-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--green); transform: scaleX(0); transition: transform 0.3s; transform-origin: left; }
+  .feature-card:hover { background: #16161F; }
+  .feature-card:hover::before { transform: scaleX(1); }
+  .feature-num { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--green); letter-spacing: 2px; margin-bottom: 16px; opacity: 0.6; }
+  .feature-title { font-size: 17px; font-weight: 500; color: var(--white); margin-bottom: 10px; }
+  .feature-desc { font-size: 14px; color: var(--gray); line-height: 1.65; }
+
+  /* ABOUT / E-E-A-T */
+  .about { padding: 80px 40px; background: var(--dark); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .about-inner { max-width: 700px; margin: 0 auto; }
+  .about-inner .section-title { margin-bottom: 20px; }
+  .about-body { font-size: 15px; color: var(--light-gray); line-height: 1.8; }
+  .about-body strong { color: var(--white); font-weight: 500; }
+
+  /* SCREENSHOTS */
+  .screenshots { padding: 100px 40px; max-width: 1100px; margin: 0 auto; }
+  .screenshot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .screenshot-fig { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .screenshot-img { width: 100%; border: 1px solid var(--border); display: block; border-radius: 4px; }
+  .screenshot-cap { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; color: var(--gray); }
+
+  /* EMAIL */
+  .email-section { padding: 100px 40px; }
+  .email-inner { max-width: 560px; margin: 0 auto; text-align: center; }
+  .email-inner .section-title { margin-bottom: 12px; }
+  .email-sub { font-size: 15px; color: var(--light-gray); margin-bottom: 40px; }
+  .email-form { display: flex; max-width: 440px; margin: 0 auto; }
+  .email-input { flex: 1; background: var(--dark); border: 1px solid var(--border); border-right: none; color: var(--white); font-family: 'DM Mono', monospace; font-size: 13px; padding: 14px 18px; outline: none; transition: border-color 0.2s; }
+  .email-input::placeholder { color: var(--gray); }
+  .email-input:focus { border-color: var(--green); }
+  .email-btn { background: var(--green); color: var(--black); font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 1px; padding: 14px 20px; border: none; cursor: pointer; white-space: nowrap; transition: opacity 0.2s; }
+  .email-btn:hover { opacity: 0.85; }
+  .email-note { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--gray); letter-spacing: 1px; margin-top: 14px; }
+  .email-success { display: none; font-family: 'DM Mono', monospace; font-size: 13px; color: var(--green); letter-spacing: 1px; padding: 14px; border: 1px solid var(--green-dim); background: var(--green-glow); }
+
+  /* BUY */
+  .buy-section { padding: 100px 40px; background: var(--dark); border-top: 1px solid var(--border); }
+  .buy-inner { max-width: 520px; margin: 0 auto; text-align: center; }
+  .buy-card { background: var(--card); border: 1px solid var(--border); padding: 56px 48px; position: relative; overflow: hidden; }
+  .buy-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--green); }
+  .buy-price { font-family: 'Bebas Neue', sans-serif; font-size: 96px; color: var(--green); line-height: 1; letter-spacing: 2px; }
+  .buy-price-label { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--gray); letter-spacing: 3px; margin-top: 6px; margin-bottom: 32px; }
+  .buy-features { text-align: left; margin-bottom: 36px; }
+  .buy-feature { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 14px; color: var(--light-gray); }
+  .buy-feature:last-child { border-bottom: none; }
+  .buy-feature::before { content: '→'; color: var(--green); font-family: 'DM Mono', monospace; font-size: 12px; margin-top: 2px; flex-shrink: 0; }
+  .buy-btn { display: block; width: 100%; background: var(--green); color: var(--black); font-family: 'DM Mono', monospace; font-size: 14px; font-weight: 500; letter-spacing: 2px; padding: 18px; border: none; cursor: pointer; text-decoration: none; text-align: center; transition: opacity 0.2s; text-transform: uppercase; }
+  .buy-btn:hover { opacity: 0.85; }
+  .buy-meta { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--gray); letter-spacing: 1px; margin-top: 16px; line-height: 1.8; }
+
+  /* FOOTER */
+  footer { border-top: 1px solid var(--border); padding: 32px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 3px; color: var(--white); text-decoration: none; }
+  .footer-logo span { color: var(--green); }
+  .footer-copy { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--gray); letter-spacing: 1px; }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--gray); text-decoration: none; letter-spacing: 1px; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--green); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 600px) {
+    nav { padding: 16px 20px; }
+    .nav-links { display: none; }
+    .hero, .features, .screenshots, .email-section, .buy-section, .about { padding: 80px 20px; }
+    .buy-card { padding: 36px 20px; }
+    .email-form { flex-direction: column; }
+    .email-input { border-right: 1px solid var(--border); border-bottom: none; }
+    footer { padding: 24px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="/" class="nav-logo">RADIO<span>DESK</span></a>
+  <div class="nav-links">
+    <a href="#features">Features</a>
+    <a href="/setup.html">Setup Guide</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="mailto:support@radiodesk.app">Support</a>
+  </div>
+  <a href="https://YOUR-GUMROAD-LINK.gumroad.com/l/radiodesk" class="nav-cta" target="_blank">BUY — $39</a>
+</nav>
+
+<main>
+<section class="hero">
+  <div class="hero-eyebrow">Professional Broadcast Software for Mac</div>
+  <span class="logo-mark">RD</span>
+  <div class="logo-line"></div>
+  <div class="logo-sub">Radiodesk</div>
+
+  <!-- AEO Answer Block -->
+  <div class="answer-block">
+    <p><strong>RadioDesk is professional broadcast production software for Mac.</strong> It gives radio hosts and DJs a DAW-style crossfade editor, waveform display, multi-track audio management, and cue sheet export — for a one-time price of $39, no subscription required.</p>
+  </div>
+
+  <div class="hero-price">
+    <div class="price-tag">$39</div>
+    <div class="price-sub">ONE-TIME PURCHASE · MAC ONLY · NO SUBSCRIPTION</div>
+  </div>
+  <div class="hero-actions">
+    <a href="https://YOUR-GUMROAD-LINK.gumroad.com/l/radiodesk" class="btn-primary" target="_blank">BUY RADIODESK — $39</a>
+    <a href="#features" class="btn-ghost">SEE FEATURES ↓</a>
+  </div>
+  <div class="hero-meta">macOS 12 Monterey or later · Intel &amp; Apple Silicon · Instant .dmg download</div>
+</section>
+
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Crossfade Editor <span>✦</span></span>
+    <span class="marquee-item">Waveform Display <span>✦</span></span>
+    <span class="marquee-item">Multi-Track Audio <span>✦</span></span>
+    <span class="marquee-item">Cue Sheet Export <span>✦</span></span>
+    <span class="marquee-item">Local Artist Tagging <span>✦</span></span>
+    <span class="marquee-item">One-Time Purchase <span>✦</span></span>
+    <span class="marquee-item">Crossfade Editor <span>✦</span></span>
+    <span class="marquee-item">Waveform Display <span>✦</span></span>
+    <span class="marquee-item">Multi-Track Audio <span>✦</span></span>
+    <span class="marquee-item">Cue Sheet Export <span>✦</span></span>
+    <span class="marquee-item">Local Artist Tagging <span>✦</span></span>
+    <span class="marquee-item">One-Time Purchase <span>✦</span></span>
+  </div>
+</div>
+
+<section class="features" id="features">
+  <div class="reveal">
+    <div class="section-label">What's inside</div>
+    <h2 class="section-title">Built for the<br>working broadcaster</h2>
+    <p class="section-desc">Every feature in RadioDesk exists because a working radio host needed it. No bloat, no learning curve — just the tools that matter.</p>
+  </div>
+  <div class="features-grid reveal">
+    <article class="feature-card">
+      <div class="feature-num">01</div>
+      <h3 class="feature-title">DAW-Style Crossfade &amp; Segue Editor</h3>
+      <p class="feature-desc">Set in and out points visually, control duck depth, and preview transitions before your show. The same smooth handoff as a professional broadcast console.</p>
+    </article>
+    <article class="feature-card">
+      <div class="feature-num">02</div>
+      <h3 class="feature-title">Waveform Display with Playhead</h3>
+      <p class="feature-desc">See your audio, not just hear it. Visual waveform display so you always know exactly where you are in a track. Click to scrub to any point.</p>
+    </article>
+    <article class="feature-card">
+      <div class="feature-num">03</div>
+      <h3 class="feature-title">Multi-Track Audio Management</h3>
+      <p class="feature-desc">Cue, organize, and fire tracks without the chaos. Drag to reorder, search by title or artist, and keep your show tight from start to finish.</p>
+    </article>
+    <article class="feature-card">
+      <div class="feature-num">04</div>
+      <h3 class="feature-title">Broadcast Cue Sheet Export</h3>
+      <p class="feature-desc">Generate a broadcast-standard CSV log with offset timestamps, media type, title, artist, album, and year. Most logging systems import this format directly.</p>
+    </article>
+    <article class="feature-card">
+      <div class="feature-num">05</div>
+      <h3 class="feature-title">Local Artist Tagging</h3>
+      <p class="feature-desc">Flag and track local music in your rotation. Built for hosts who take community programming seriously and need to report local content accurately.</p>
+    </article>
+    <article class="feature-card">
+      <div class="feature-num">06</div>
+      <h3 class="feature-title">Native Mac App · No Subscription</h3>
+      <p class="feature-desc">One-time purchase. No account required, no cloud dependency, no monthly fee. RadioDesk lives on your machine and works offline, always.</p>
+    </article>
+  </div>
+</section>
+
+<!-- SCREENSHOTS -->
+<section class="screenshots" id="screenshots">
+  <div class="reveal">
+    <div class="section-label">In action</div>
+    <h2 class="section-title">See RadioDesk</h2>
+    <p class="section-desc">A professional broadcast environment that gets out of your way and lets you focus on the show.</p>
+  </div>
+  <div class="screenshot-grid reveal">
+    <figure class="screenshot-fig">
+      <img src="screenshot-main.png" alt="RadioDesk main playlist interface showing color-coded tracks, local artist tags, and live clock" class="screenshot-img">
+      <figcaption class="screenshot-cap">Main playlist interface</figcaption>
+    </figure>
+    <figure class="screenshot-fig">
+      <img src="screenshot-segue.png" alt="RadioDesk Segue Editor showing waveform overlap, duck depth slider at -14dB, and Preview Segue button" class="screenshot-img">
+      <figcaption class="screenshot-cap">Segue Editor — set crossfade overlap and duck depth visually</figcaption>
+    </figure>
+    <figure class="screenshot-fig">
+      <img src="screenshot-record.png" alt="RadioDesk Record VT panel with input device selector, record button, and waveform playback" class="screenshot-img">
+      <figcaption class="screenshot-cap">Voice track recording panel</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- E-E-A-T / ABOUT -->
+<section class="about">
+  <div class="about-inner reveal">
+    <div class="section-label">Built by a broadcaster</div>
+    <h2 class="section-title">Made by someone<br>who actually does this</h2>
+    <div class="about-body">
+      <p>RadioDesk was built by a working radio host with over 20 years behind the mic — someone who has run specialty shows, managed playlists live on air, and needed broadcast software that actually matched how working hosts run a show.</p>
+      <br>
+      <p>The tools that existed were either overkill for independent hosts or built for a different era of radio. RadioDesk is the software we wanted to use — and now it's available to everyone doing the same work.</p>
+      <br>
+      <p>Questions? <a href="mailto:support@radiodesk.app" style="color:var(--green);text-decoration:none;">support@radiodesk.app</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL -->
+<section class="email-section" id="updates">
+  <div class="email-inner reveal">
+    <div class="section-label">Stay in the loop</div>
+    <h2 class="section-title">Get Updates</h2>
+    <p class="email-sub">New features, release notes, and occasional dispatches from a working broadcaster. No spam.</p>
+    <div class="email-form" id="emailForm">
+      <input type="email" class="email-input" id="emailInput" placeholder="your@email.com" aria-label="Email address">
+      <button class="email-btn" onclick="handleEmail()">SUBSCRIBE</button>
+    </div>
+    <div class="email-success" id="emailSuccess" role="alert">✓ You're in. Talk soon.</div>
+    <div class="email-note">No spam. Unsubscribe anytime.</div>
+  </div>
+</section>
+
+<!-- BUY -->
+<section class="buy-section" id="buy">
+  <div class="buy-inner reveal">
+    <div class="section-label">Get RadioDesk</div>
+    <div class="buy-card">
+      <div class="buy-price">$39</div>
+      <div class="buy-price-label">ONE-TIME · NO SUBSCRIPTION</div>
+      <div class="buy-features">
+        <div class="buy-feature">DAW-style crossfade &amp; segue editor</div>
+        <div class="buy-feature">Waveform display with playhead</div>
+        <div class="buy-feature">Multi-track audio management</div>
+        <div class="buy-feature">Broadcast cue sheet export</div>
+        <div class="buy-feature">Local artist tagging</div>
+        <div class="buy-feature">Free updates · No account required</div>
+      </div>
+      <a href="https://YOUR-GUMROAD-LINK.gumroad.com/l/radiodesk" class="buy-btn" target="_blank">Download RadioDesk — $39</a>
+      <div class="buy-meta">
+        macOS 12 Monterey or later · Intel &amp; Apple Silicon<br>
+        Instant .dmg download after purchase<br>
+        Questions? <a href="mailto:support@radiodesk.app" style="color:var(--green)">support@radiodesk.app</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <a href="/" class="footer-logo">RADIO<span>DESK</span></a>
+  <div class="footer-copy">© 2026 Schectman Media Group LLC</div>
+  <div class="footer-links">
+    <a href="/setup.html">Setup Guide</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="mailto:support@radiodesk.app">Support</a>
+    <a href="#buy">Buy — $39</a>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); });
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+  function handleEmail() {
+    const input = document.getElementById('emailInput');
+    const form = document.getElementById('emailForm');
+    const success = document.getElementById('emailSuccess');
+    if (!input.value || !input.value.includes('@')) { input.style.borderColor = '#FF4444'; setTimeout(() => input.style.borderColor = '', 1500); return; }
+    form.style.display = 'none';
+    success.style.display = 'block';
+  }
+</script>
+</body>
+</html>
