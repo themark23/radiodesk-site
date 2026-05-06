@@ -152,8 +152,20 @@
   .screenshots { padding: 100px 40px; max-width: 1100px; margin: 0 auto; }
   .screenshot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
   .screenshot-fig { margin: 0; display: flex; flex-direction: column; gap: 10px; }
-  .screenshot-img { width: 100%; border: 1px solid var(--border); display: block; border-radius: 4px; }
+  .screenshot-link { display: block; position: relative; cursor: zoom-in; }
+  .screenshot-link::after { content: '⤢'; position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,0.7); color: var(--green); font-size: 14px; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.2s; border: 1px solid var(--border); }
+  .screenshot-link:hover::after { opacity: 1; }
+  .screenshot-img { width: 100%; border: 1px solid var(--border); display: block; border-radius: 4px; transition: border-color 0.2s; }
+  .screenshot-link:hover .screenshot-img { border-color: var(--green); }
   .screenshot-cap { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; color: var(--gray); }
+
+  /* LIGHTBOX */
+  .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 200; align-items: center; justify-content: center; padding: 40px; cursor: zoom-out; }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 100%; max-height: 100%; border: 1px solid var(--border); border-radius: 4px; object-fit: contain; cursor: default; }
+  .lightbox-close { position: absolute; top: 20px; right: 28px; color: var(--gray); font-family: 'DM Mono', monospace; font-size: 24px; cursor: pointer; line-height: 1; transition: color 0.2s; }
+  .lightbox-close:hover { color: var(--white); }
+  .lightbox-cap { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--gray); white-space: nowrap; }
 
   /* EMAIL */
   .email-section { padding: 100px 40px; }
@@ -349,15 +361,21 @@
   </div>
   <div class="screenshot-grid reveal">
     <figure class="screenshot-fig">
-      <img src="screenshot-main.png" alt="RadioDesk main playlist interface showing color-coded tracks, local artist tags, and live clock" class="screenshot-img">
+      <a class="screenshot-link" onclick="openLightbox('screenshot-main.png','Main playlist interface')">
+        <img src="screenshot-main.png" alt="RadioDesk main playlist interface showing color-coded tracks, local artist tags, and live clock" class="screenshot-img">
+      </a>
       <figcaption class="screenshot-cap">Main playlist interface</figcaption>
     </figure>
     <figure class="screenshot-fig">
-      <img src="screenshot-segue.png" alt="RadioDesk Segue Editor showing waveform overlap, duck depth slider at -14dB, and Preview Segue button" class="screenshot-img">
+      <a class="screenshot-link" onclick="openLightbox('screenshot-segue.png','Segue Editor — set crossfade overlap and duck depth visually')">
+        <img src="screenshot-segue.png" alt="RadioDesk Segue Editor showing waveform overlap, duck depth slider at -14dB, and Preview Segue button" class="screenshot-img">
+      </a>
       <figcaption class="screenshot-cap">Segue Editor — set crossfade overlap and duck depth visually</figcaption>
     </figure>
     <figure class="screenshot-fig">
-      <img src="screenshot-record.png" alt="RadioDesk Record VT panel with input device selector, record button, and waveform playback" class="screenshot-img">
+      <a class="screenshot-link" onclick="openLightbox('screenshot-record.png','Voice track recording panel')">
+        <img src="screenshot-record.png" alt="RadioDesk Record VT panel with input device selector, record button, and waveform playback" class="screenshot-img">
+      </a>
       <figcaption class="screenshot-cap">Voice track recording panel</figcaption>
     </figure>
   </div>
@@ -421,6 +439,13 @@
 </section>
 </main>
 
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close" onclick="closeLightbox()">✕</span>
+  <img id="lightbox-img" src="" alt="">
+  <div class="lightbox-cap" id="lightbox-cap"></div>
+</div>
+
 <footer>
   <a href="/" class="footer-logo">RADIO<span>DESK</span></a>
   <div class="footer-copy">© 2026 Schectman Media Group LLC</div>
@@ -438,6 +463,18 @@
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
   reveals.forEach(r => observer.observe(r));
+  function openLightbox(src, cap) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-cap').textContent = cap;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
   function handleEmail() {
     const input = document.getElementById('emailInput');
     const form = document.getElementById('emailForm');
