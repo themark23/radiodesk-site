@@ -244,6 +244,7 @@
     <a href="#microphone" class="cat-btn">Microphone &amp; Recording</a>
     <a href="#playback" class="cat-btn">Playback &amp; Audio</a>
     <a href="#files" class="cat-btn">Files &amp; Formats</a>
+    <a href="#library" class="cat-btn">Library &amp; Categories</a>
     <a href="#troubleshooting" class="cat-btn">Troubleshooting</a>
   </div>
 
@@ -392,6 +393,84 @@
         <span class="faq-icon">+</span>
       </button>
       <div class="faq-a">The Cue Sheet exports a CSV file with a timestamped log of every element in your show — songs, voice tracks, and their metadata. It follows broadcast standard format with columns for offset, media type, title, artist, album, and year. Most broadcast logging systems can import this format directly.</div>
+    </div>
+  </section>
+
+  <!-- LIBRARY & CATEGORIES -->
+  <section class="faq-section" id="library">
+    <h2 class="faq-section-title">Library &amp; Categories</h2>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">What is the Music Library in RadioDesk?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">The Music Library is a panel that lets you browse and manage all the songs in a folder you point it to. Click <strong>Library</strong> in the menu bar to open it. From there you can search by title or artist, sort by name or duration, filter by category, and double-click any song to add it directly to your playlist.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">What are Song Categories?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Song Categories are labels you assign to tracks in your library to organize them the way a real radio station does. RadioDesk supports seven categories:
+        <br><br>
+        <strong>Fresh Finds</strong> — brand new music you're breaking<br>
+        <strong>Currents</strong> — current hits in regular rotation<br>
+        <strong>Heavy Currents</strong> — your most-played currents<br>
+        <strong>Recent Favorites</strong> — tracks that have aged out of currents but still sound fresh<br>
+        <strong>Found Gold</strong> — older deep catalog songs<br>
+        <strong>Deep Cuts</strong> — b-sides, rarities, and album tracks<br>
+        <strong>Local</strong> — music by artists in your area
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">How do I assign a category to a song?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">In the Music Library, click the <strong>✎</strong> (pencil) button on any song row to open the Edit Track popup. You'll see a Category dropdown with all seven categories. Select one and click Save. Categories are stored in RadioDesk's metadata system and persist across sessions — they don't modify the audio file itself.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">What is Auto-Categorize?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Auto-Categorize analyzes when each song was added to your computer and assigns a category automatically based on its age. Click <strong>Auto-Categorize…</strong> in the library header to open the dialog. Use the sliders to set your thresholds — for example, songs under 30 days old → Fresh Finds, under 90 days → Currents, under a year → Recent Favorites, and everything older → Found Gold. A live preview shows how many songs will land in each category before you apply. Heavy Currents, Deep Cuts, and Local are never auto-assigned — those always require a manual decision.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">What is Category Aging?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Category Aging automatically moves songs between categories as they get older. A track auto-categorized as Fresh Finds will graduate to Currents, then Recent Favorites, then Found Gold over time — without you doing anything. This happens silently each time you launch RadioDesk, using the same thresholds you set in Auto-Categorize. Songs you've categorized manually are never touched by aging, only auto-categorized ones.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">What is a Liner Rotator?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">A Liner Rotator is a special playlist slot that picks a random liner (station ID, promo, bumper) from a folder you designate. Click <strong>+ Liner</strong> in the toolbar to add one. The first time you add a Liner Rotator, RadioDesk will ask you to choose your liners folder — it remembers that folder going forward. The rotator immediately resolves to an actual file, so you can adjust its segue before exporting. Use the <strong>↻</strong> re-roll button on any rotator row to swap in a different liner. Liner Rotators do not appear on the Cue Sheet — they log like standard promos in broadcast terms.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">What is a Category Slot?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">A Category Slot is a playlist slot that picks a random song from one of your categories. To add one, open the Library, click a category filter button (e.g. <strong>Currents</strong>), and click the <strong>+ Add Slot</strong> button that appears. RadioDesk immediately picks a song from that category and adds it to your playlist as a real, playable track — with a purple <strong>↻ CURRENTS</strong> badge so you know where it came from. Use the <strong>↻</strong> re-roll button to swap it for a different song from the same category before exporting.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">How do I mark a song as Local?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Open the library, click <strong>✎</strong> on the song, and choose <strong>Local</strong> from the Category dropdown. Local songs also appear when you filter by the Local category and are eligible for Local category slots. Removing the Local category from a song removes it from the Local pool as well.</div>
     </div>
   </section>
 
