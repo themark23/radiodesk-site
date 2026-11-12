@@ -131,6 +131,54 @@
         "@type": "Answer",
         "text": "This can happen with large audio files on slower machines. Try closing other apps to free up memory. WAV files generally play more smoothly than MP3s because they don't require real-time decoding."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Voice Processing do to my voice tracks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It brings every voice track to the same loudness, steadies your level if you lean in or drift off the mic, removes rumble and room noise between phrases, softens harsh 's' sounds, and holds peaks under a ceiling so the track can't clip. You choose the loudness, how much compression, and a Natural, Bright or Broadcast tone. Open it from VT Processing in the menu bar or the Processing button in the recorder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I hear my voice track with and without processing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Your original recording is always kept. After a take, the recorder shows a PROCESSED and ORIGINAL switch — click either side, even while it's playing, to compare. It also shows the loudness, peak and range before and after. Whichever version is selected is the one that gets saved. If you change a processing setting, the take in the recorder is re-processed when you click Done, so you don't need to re-record."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I match my voice level to my music?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Load your show, open VT Processing, and click Match my show's music. RadioDesk measures the songs in your playlist and sets your voice one loudness unit above their average, so talk breaks sit just in front of the music. You can also set the loudness yourself with the slider; -16 LUFS suits most shows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the artist look-up, and what does it send over the internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On any song row, the notes button can look up where the artist is from, their latest and upcoming releases, a short bio, recent stories and interviews, and tour-date links. It is off until you turn it on. When it's on, only the artist name and song title are sent — nothing about you, your library or your show. Facts come from MusicBrainz and Wikipedia; headlines come from Stereogum and the Dallas Observer. Results are saved on your Mac, so a song you play often is only looked up about once a week. Everything else in RadioDesk works without an internet connection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "The artist info is wrong or missing. Why?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The facts come from volunteer-edited sources, so brand-new and very local acts are sometimes missing or thin, and details can be out of date. If more than one artist shares a name, RadioDesk asks which one you mean instead of guessing — use Wrong artist? to choose again. Headlines are matched by name, so check the date and that the story is about your artist. Treat everything as a starting point and double-check before you say it on air."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can RadioDesk show upcoming concerts in my city?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Set your market in the notes popup (for example, Dallas Fort Worth) and RadioDesk adds a one-click search for that artist's shows near you, plus a tour-dates link. These open in your web browser. There are also one-click searches for the artist on Stereogum, Pitchfork, SPIN, the Dallas Observer, D Magazine and Bandsintown."
+      }
     }
   ]
 }
@@ -245,6 +293,7 @@
     <a href="#playback" class="cat-btn">Playback &amp; Audio</a>
     <a href="#files" class="cat-btn">Files &amp; Formats</a>
     <a href="#library" class="cat-btn">Library &amp; Categories</a>
+    <a href="#voice-and-notes" class="cat-btn">Voice Processing &amp; Artist Notes</a>
     <a href="#troubleshooting" class="cat-btn">Troubleshooting</a>
   </div>
 
@@ -471,6 +520,59 @@
         <span class="faq-icon">+</span>
       </button>
       <div class="faq-a">Open the library, click <strong>✎</strong> on the song, and choose <strong>Local</strong> from the Category dropdown. Local songs also appear when you filter by the Local category and are eligible for Local category slots. Removing the Local category from a song removes it from the Local pool as well.</div>
+    </div>
+  </section>
+
+  <!-- VOICE PROCESSING & ARTIST NOTES -->
+  <section class="faq-section" id="voice-and-notes">
+    <h2 class="faq-section-title">Voice Processing &amp; Artist Notes</h2>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">What does Voice Processing do to my voice tracks?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">It brings every voice track to the same loudness, steadies your level if you lean in or drift off the mic, removes rumble and room noise between phrases, softens harsh 's' sounds, and holds peaks under a ceiling so the track can't clip. You choose the loudness, how much compression, and a Natural, Bright or Broadcast tone. Open it from VT Processing in the menu bar or the Processing button in the recorder.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">Can I hear my voice track with and without processing?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Yes. Your original recording is always kept. After a take, the recorder shows a PROCESSED and ORIGINAL switch — click either side, even while it's playing, to compare. It also shows the loudness, peak and range before and after. Whichever version is selected is the one that gets saved. If you change a processing setting, the take in the recorder is re-processed when you click Done, so you don't need to re-record.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">How do I match my voice level to my music?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Load your show, open VT Processing, and click Match my show's music. RadioDesk measures the songs in your playlist and sets your voice one loudness unit above their average, so talk breaks sit just in front of the music. You can also set the loudness yourself with the slider; -16 LUFS suits most shows.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">What is the artist look-up, and what does it send over the internet?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">On any song row, the notes button can look up where the artist is from, their latest and upcoming releases, a short bio, recent stories and interviews, and tour-date links. It is off until you turn it on. When it's on, only the artist name and song title are sent — nothing about you, your library or your show. Facts come from MusicBrainz and Wikipedia; headlines come from Stereogum and the Dallas Observer. Results are saved on your Mac, so a song you play often is only looked up about once a week. Everything else in RadioDesk works without an internet connection.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">The artist info is wrong or missing. Why?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">The facts come from volunteer-edited sources, so brand-new and very local acts are sometimes missing or thin, and details can be out of date. If more than one artist shares a name, RadioDesk asks which one you mean instead of guessing — use Wrong artist? to choose again. Headlines are matched by name, so check the date and that the story is about your artist. Treat everything as a starting point and double-check before you say it on air.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span class="faq-q-text">Can RadioDesk show upcoming concerts in my city?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Set your market in the notes popup (for example, Dallas Fort Worth) and RadioDesk adds a one-click search for that artist's shows near you, plus a tour-dates link. These open in your web browser. There are also one-click searches for the artist on Stereogum, Pitchfork, SPIN, the Dallas Observer, D Magazine and Bandsintown.</div>
     </div>
   </section>
 

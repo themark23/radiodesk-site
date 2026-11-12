@@ -32,7 +32,7 @@
     "priceCurrency": "USD"
   },
   "description": "RadioDesk is professional broadcast production software for Mac. Features include a DAW-style crossfade and segue editor, waveform display with playhead, multi-track audio management, cue sheet export, and local artist tagging. One-time purchase, no subscription.",
-  "softwareVersion": "1.0",
+  "softwareVersion": "1.2",
   "fileSize": "500MB",
   "downloadUrl": "https://radiodesk.gumroad.com/l/okdkvp",
   "screenshot": "https://radiodesk.app/screenshot.png",
@@ -157,6 +157,8 @@
   .screenshot-link:hover::after { opacity: 1; }
   .screenshot-img { width: 100%; border: 1px solid var(--border); display: block; border-radius: 4px; transition: border-color 0.2s; }
   .screenshot-link:hover .screenshot-img { border-color: var(--green); }
+  /* tall pop-up windows: thumbnail cropped to the same shape as the others; the lightbox shows the whole thing */
+  .screenshot-img.portrait { aspect-ratio: 2550 / 1784; object-fit: cover; object-position: top center; }
   .screenshot-cap { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; color: var(--gray); }
 
   /* LIGHTBOX */
@@ -292,7 +294,7 @@
     <article class="feature-card">
       <div class="feature-num">01</div>
       <h3 class="feature-title">DAW-Style Crossfade &amp; Segue Editor</h3>
-      <p class="feature-desc">Set in and out points visually, control duck depth, and preview transitions before your show. The same smooth handoff as a professional broadcast console.</p>
+      <p class="feature-desc">Drag waveforms to set exactly where the next element starts, then preview the transition before your show. Click a liner or sweeper and a third lane appears, so you can set the way in and the way out in one view. What you preview is what you export.</p>
     </article>
     <article class="feature-card">
       <div class="feature-num">02</div>
@@ -317,7 +319,7 @@
     <article class="feature-card">
       <div class="feature-num">06</div>
       <h3 class="feature-title">Native Mac App · No Subscription</h3>
-      <p class="feature-desc">One-time purchase. No account required, no cloud dependency, no monthly fee. RadioDesk lives on your machine and works offline, always.</p>
+      <p class="feature-desc">One-time purchase. No account required, no cloud dependency, no monthly fee. RadioDesk lives on your machine and works offline. The only feature that goes online is the optional artist look-up, and it stays off until you turn it on.</p>
     </article>
     <article class="feature-card">
       <div class="feature-num">07</div>
@@ -349,6 +351,21 @@
       <h3 class="feature-title">Play Count</h3>
       <p class="feature-desc">Every song tracks how many times it's been added to a show. Sort your library by play count to see what's getting heavy rotation — and what's been sitting on the shelf.</p>
     </article>
+    <article class="feature-card">
+      <div class="feature-num">13</div>
+      <h3 class="feature-title">Broadcast Voice Processing</h3>
+      <p class="feature-desc">Every voice track lands at the same loudness, with your level steadied, the room cleaned up and peaks held under a ceiling so it can't clip. Choose a Natural, Bright or Broadcast tone, and match your voice to your show's music with one click.</p>
+    </article>
+    <article class="feature-card">
+      <div class="feature-num">14</div>
+      <h3 class="feature-title">Processed vs. Original</h3>
+      <p class="feature-desc">Your raw take is always kept. Flip between PROCESSED and ORIGINAL while it plays, see the before-and-after loudness and peak numbers, and save whichever one you prefer. Music beds are kept separate from your voice, so processing never pumps the music.</p>
+    </article>
+    <article class="feature-card">
+      <div class="feature-num">15</div>
+      <h3 class="feature-title">Talk-Break Artist Notes</h3>
+      <p class="feature-desc">Open the notes on any song to see where the artist is from, their latest and upcoming releases, a short bio, recent stories and interviews, and tour-date links for your market. Add the facts to your notes with one click. Off until you turn it on.</p>
+    </article>
   </div>
 </section>
 
@@ -367,16 +384,28 @@
       <figcaption class="screenshot-cap">Main playlist interface</figcaption>
     </figure>
     <figure class="screenshot-fig">
-      <a class="screenshot-link" onclick="openLightbox('screenshot-segue.png','Segue Editor — set crossfade overlap and duck depth visually')">
-        <img src="screenshot-segue.png" alt="RadioDesk Segue Editor showing waveform overlap, duck depth slider at -14dB, and Preview Segue button" class="screenshot-img">
+      <a class="screenshot-link" onclick="openLightbox('screenshot-segue.png','Segue Editor — a liner between two songs, both transitions in one view')">
+        <img src="screenshot-segue.png" alt="RadioDesk Segue Editor showing three waveform lanes: the end of a song, a liner, and the start of the next song, with overlap handles and a Preview Segue button" class="screenshot-img">
       </a>
-      <figcaption class="screenshot-cap">Segue Editor — set crossfade overlap and duck depth visually</figcaption>
+      <figcaption class="screenshot-cap">Segue Editor — a liner between two songs, both transitions in one view</figcaption>
     </figure>
     <figure class="screenshot-fig">
-      <a class="screenshot-link" onclick="openLightbox('screenshot-record.png','Voice track recording panel')">
-        <img src="screenshot-record.png" alt="RadioDesk Record VT panel with input device selector, record button, and waveform playback" class="screenshot-img">
+      <a class="screenshot-link" onclick="openLightbox('screenshot-record.png','Voice track recorder — processed vs. original, with before and after loudness')">
+        <img src="screenshot-record.png" alt="RadioDesk Record VT panel showing a recorded take with a PROCESSED and ORIGINAL switch and loudness, peak and range measurements before and after processing" class="screenshot-img">
       </a>
-      <figcaption class="screenshot-cap">Voice track recording panel</figcaption>
+      <figcaption class="screenshot-cap">Voice track recorder — processed vs. original, with before and after loudness</figcaption>
+    </figure>
+    <figure class="screenshot-fig">
+      <a class="screenshot-link" onclick="openLightbox('screenshot-voice.png','Voice processing — loudness, compression, tone and clean-up')">
+        <img src="screenshot-voice.png" alt="RadioDesk Voice Track Processing settings: loudness target, compression amount, Natural, Bright and Broadcast tone, low cut, noise reduction, de-esser and peak ceiling" class="screenshot-img portrait">
+      </a>
+      <figcaption class="screenshot-cap">Voice processing — loudness, compression, tone and clean-up</figcaption>
+    </figure>
+    <figure class="screenshot-fig">
+      <a class="screenshot-link" onclick="openLightbox('screenshot-notes.png','Talk-break notes — artist facts, stories and tour-date links')">
+        <img src="screenshot-notes.png" alt="RadioDesk talk-break notes popup showing an artist bio, links, tour dates for the host's market, recent Stereogum headlines, and the host's own notes" class="screenshot-img portrait">
+      </a>
+      <figcaption class="screenshot-cap">Talk-break notes — artist facts, stories and tour-date links</figcaption>
     </figure>
   </div>
 </section>
